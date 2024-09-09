@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Products - My Shopping Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar-brand a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .navbar-search {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-search input {
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            width: 100%;
+        }
+
+        .navbar-search button {
+            padding: 8px 16px;
+            font-size: 16px;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .navbar-search button:hover {
+            background-color: #666;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .navbar-menu a:hover {
+            text-decoration: underline;
+        }
+
+        
+        /* main content */
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+        .product-card h3 {
+            margin: 15px 0;
+            font-size: 1.2em;
+        }
+        .product-card p {
+            font-size: 0.9em;
+            color: #666;
+            margin: 10px 0;
+        }
+        .product-card .price {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #28a745;
+        }
+        .product-card button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .product-card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="#">ForAim</a>
+            </div>
+            <div class="navbar-search">
+                <input type="text" placeholder="Search...">
+                <button type="button">Search</button>
+            </div>
+            <div class="navbar-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <h1>Our Products</h1>
+    <div class="product-container" id="productContainer">
+        <!-- Product cards will be generated here -->
+    </div>
+
+    <script>
+        // Array of 100 products where you control heading, price, and image
+        const products = [
+            {title: 'Product 1', price: 599, image: 'https://via.placeholder.com/250?text=Product+1'},
+            {title: 'Product 2', price: 1099, image: 'https://via.placeholder.com/250?text=Product+2'},
+            {title: 'Product 3', price: 349, image: 'https://via.placeholder.com/250?text=Product+3'},
+            {title: 'Product 4', price: 400, image: 'https://via.placeholder.com/250?text=Product+3'},
+            // Add your own products here...
+            // Repeat or change these as needed for 100 products
+        ];
+
+        // You can easily repeat the above for 100 products
+        for (let i = 4; i <= 100; i++) {
+            products.push({
+                title: `Product ${i}`,
+                price: (Math.random() * (100 - 20) + 20).toFixed(2),  // Random price for demonstration
+                image: `https://via.placeholder.com/250?text=Product+${i}` // Placeholder image for demonstration
+            });
+        }
+
+        const productContainer = document.getElementById('productContainer');
+
+        // Function to generate product cards dynamically from the products array
+        const generateProductCards = (productArray) => {
+            productArray.forEach(product => {
+                const productCard = `
+                    <div class="product-card">
+                        <img src="${product.image}" alt="${product.title}">
+                        <h3>${product.title}</h3>
+                        <p>This is a short description of ${product.title}. It is popular and highly rated.</p>
+                        <div class="price">$${product.price}</div>
+                        <button>Add to Cart</button>
+                    </div>
+                `;
+
+                // Append the product card to the container
+                productContainer.innerHTML += productCard;
+            });
+        };
+
+        // Generate the product cards
+        generateProductCards(products);
+    </script>
+</body>
+</html>
