@@ -215,66 +215,66 @@ a {
     /* border: 2px solid black; */
 }
 
-.card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
     text-align: center;
-    background-color: whitesmoke;
-    margin: 20px;
-    height: 100%;
-    box-shadow: 0px 0px 20px 0px rgb(185, 185, 185);
-    border-radius: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-    font-size: 15px;
-    /* border: 2px solid black; */
+    padding: 20px;
 }
 
-.card img {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    /* border: 2px solid black; */
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.card .price {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    font-size: 15px;
-    margin: 10px 0px;
-    /* border: 2px solid black; */
+.product-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
 }
-.card .title p {
-    font-size: 20px;
+
+.product-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.cut-price {
     text-decoration: line-through;
-    text-decoration-color: red;
+    color: #888;
+    margin-right: 10px;
 }
 
-.card .title button {
-    border: none;
+.new-price {
+    color: green;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.product-discount {
     background-color: green;
     color: white;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.2em;
 }
 
 @media only screen and (max-width: 600px) {
 
-    .card {
+    .product-card {
         width: 200px;
     }
 
 
-    .card img {
+    .product-image img {
         width: 200px;
     }
 
-    .card .price {
+    .new-price {
         font-size: 12px;
         padding: 10px;
         margin: 0;
