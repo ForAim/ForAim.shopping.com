@@ -37,7 +37,7 @@ body {
     display: block;
 }
 
-.product-info {
+.product-information {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,7 +49,7 @@ body {
     /* border: 2px solid black; */
 }
 
-.product-info h3 {
+.product-information h3 {
     margin: 40px;
     font-size: 20px;
     color: #333;
@@ -72,13 +72,13 @@ body {
     }
 }
 
-.product-info p {
+.product-information p {
     margin: 10px 0;
     font-size: 30px;
     color: #666;
 }
 
-.product-info button {
+.product-information button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -88,6 +88,6 @@ body {
     border-radius: 5px;
 }
 
-.product-info button:hover {
+.product-information button:hover {
     background-color: #0056b3;
 }
