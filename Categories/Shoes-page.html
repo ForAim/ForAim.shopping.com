@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Products - My Shopping Website</title>
+    <title>foraim-shoes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +11,6 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-
 
         /* Navbar */
         .navbar {
@@ -136,7 +135,6 @@
 </head>
 <body>
 
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-container">
@@ -165,22 +163,15 @@
     <script>
         // Array of 100 products where you control heading, price, and image
         const products = [
-            {title: 'Product 1', price: 599, image: 'https://via.placeholder.com/250?text=Product+1'},
-            {title: 'Product 2', price: 1099, image: 'https://via.placeholder.com/250?text=Product+2'},
-            {title: 'Product 3', price: 349, image: 'https://via.placeholder.com/250?text=Product+3'},
-            {title: 'Product 4', price: 400, image: 'https://via.placeholder.com/250?text=Product+3'},
+            {title: 'Product 1', price: 0, image: 'https://via.placeholder.com/250?text=Product+1'},
+            {title: 'Product 2', price: 0, image: 'https://via.placeholder.com/250?text=Product+2'},
+            {title: 'Product 3', price: 0, image: 'https://via.placeholder.com/250?text=Product+3'},
+            {title: 'Product 4', price: 0, image: 'https://via.placeholder.com/250?text=Product+3'},
             // Add your own products here...
             // Repeat or change these as needed for 100 products
         ];
 
         // You can easily repeat the above for 100 products
-        for (let i = 4; i <= 100; i++) {
-            products.push({
-                title: `Product ${i}`,
-                price: (Math.random() * (100 - 20) + 20).toFixed(2),  // Random price for demonstration
-                image: `https://via.placeholder.com/250?text=Product+${i}` // Placeholder image for demonstration
-            });
-        }
 
         const productContainer = document.getElementById('productContainer');
 
