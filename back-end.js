@@ -18,7 +18,7 @@ function Card(img, title, cut_price, price, discount) {
 
 Card("Products-images/earbuds/IMG-20240911-WA0006.jpg", "New Boult Audio UFO earbuds", "3,499", "1,399", "60% OFF")
 Card("Products-images/smart-watch/IMG-20240911-WA0016.jpg", "Noise twist round dial smart watch", "4,999", "1,499", "70% OFF")
-Card("Products-images/T-shirts/IMG-20240911-WA0022.jpg", "Veirdo Pure Cotton Oversized T-shirt", "4,999", "1,499", "70% OFF")
+Card("Products-images/t-shirts/IMG-20240911-WA0022.jpg", "Veirdo Pure Cotton Oversized T-shirt", "4,999", "1,499", "70% OFF")
 Card("Products-images/Fashion/51Mam8F2ufL.jpg", "Men's Casual Button down Shirts", "2,195", "499", "77% OFF")
 Card("Products-images/Fashion/61fScC033bL._SY879_.jpg", "Lymio Men Cargo Pants in Cotton ", "4,599", "699", "85% OFF")
 Card("Products-images/Fashion/71-GakBLxWL._SY879_.jpg", "Symbol Premium Men's Formal Shirt", "2,599", "1,699", "35% OFF")
