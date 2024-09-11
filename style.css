@@ -12,28 +12,6 @@ a {
     text-decoration: none;
 }
 
-.log {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.logo {
-    height: 70px;
-    border: 2px solid white;
-    border-radius: 100%;
-    width: 70px;
-    padding: 10px;
-    text-align: center;
-    align-content: center;
-    background-color: rgb(26, 39, 104);
-    color: white;
-    position: fixed;
-    z-index: 1;
-    bottom: 0px;
-
-    
-}
-
 /* Navbar styling */
 .navbar {
     display: flex;
@@ -48,19 +26,6 @@ a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 25px;
     padding: 5px;
-    animation: nav-animation 0.5s alternate;
-}
-
-@keyframes nav-animation {
-
-    0%{
-        width: 0;
-    }
-
-    100% {
-        width: 1500px;
-    }
-    
 }
 
 .navbar h1 {
@@ -146,6 +111,7 @@ a {
     /* margin: 0px 15px; */
     border-radius: 25px;
     overflow: scroll;
+    
 }
 
 .category li {
@@ -222,6 +188,7 @@ a {
     width: 300px;
     text-align: center;
     padding: 20px;
+    margin: 10px;
 }
 
 .product-image img {
@@ -249,7 +216,7 @@ a {
 }
 
 .new-price {
-    color: green;
+    color: black;
     font-weight: bold;
     font-size: 1.5em;
 }
@@ -291,31 +258,66 @@ a {
 
 
 /* About content */
-.about {
-    height: 400px;
-    background-color: rgb(26, 39, 104);
-}
-
-.social-links img {
-    border-radius: 20px;
-    margin: 20px;
-
-    /* border: 2px solid red; */
-
-}
-
-.about .heading {
-    color: white;
-}
-
-.about .heading h3{
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    font-family: sans-serif;
-    font-size: 30px;
-    /* font-weight: 500; */
+    padding: 100px;
 }
 
-.banner {
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 44px;
+    /* height: 24px; */
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 10px;
+}
+
+.banner img {
     height: 500px;
     border: 2px solid black;
     background-color: red;
